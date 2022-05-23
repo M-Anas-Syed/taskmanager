@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.css' rel='stylesheet' />
+    <title>Task Manager</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js'></script>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div><img class="logo" src="images/TaskManagersolid.png" alt="Task manager logo"></div>
+            <div class="links_container">
+                <a class="links" href="/home.html">Dashboard</a>
+                <a class="links" href="/calendar.html">Calendar</a>
+                <a class="links" href="/index.html">Logout</a>
+                <a class="links profile_svg" href="#"><img class="img_style" src="/images/account.svg"
+                        alt="profile"></a>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <div class="profile_div">
+            <div class="top_div">
+                <div class="pic_and_info">
+                    <img class="pp" src="/images/profilepic.jpg" alt="">
+                    <div class="user_info">
+                        <p class="name">Random User</p>
+                        <p>Computer Science Student</p>
+                    </div>
+                </div>
+                <div class="right_panel">
+                    <div class="socials">
+                        <img class="social_logos" src="images/facebook.png" alt="facebook" title="Facebook">
+                        <img class="social_logos" src="images/google.png" alt="google" title="Google">
+                        <img class="social_logos" src="images/instagram.png" alt="instagram" title="Instagram">
+                    </div>
+                    <button class="edit_profile">Edit Profile</button>
+                </div>
+                
+            </div>
+
+            <h2 class="mtop">Friday, 27th May 2022</h2>
+            <div class="progression">
+                <div>
+                    <p class="mb">Tasks Completed</p>
+                    <div class="circular">
+                        <div class="inner"></div>
+                        <div class="number">0%</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="bar right">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="mb">Tasks Pending</p>
+                    <div class="circular">
+                        <div class="inner"></div>
+                        <div class="number1">0%</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress1"></div>
+                            </div>
+                            <div class="bar right">
+                                <div class="progress1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <h2 class="thisMonth">This month</h2>
+            <div id="piechart" style="width: 900px; height: 450px; margin-left: 170px;"></div>
+            <div class="progress_update">
+                <p>Wow! Your prdouctivity has increased by 8% this month!</p>
+                <button class="share_btn">Share Progress</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer_div">
+            <img class="footer_logo" src="/images/TaskManager.png" alt="TaskManagerLogo">
+            <div class="footer_links">
+                <a class="footer_a" href="/home.html">Home</a>
+                <a class="footer_a" href="/calendar.html">Calendar</a>
+                <a class="footer_a" href="/index.html">Logout</a>
+            </div>
+            <div style="display: flex;justify-content: space-around;width: 100px;">
+                <a href="/index.html">
+                    <img class="social_logos" src="images/facebook.png" alt="facebook" title="Facebook">
+                </a>
+                <a href="/index.html">
+                    <img class="social_logos" src="images/google.png" alt="google" title="Google">
+                </a>
+                <a href="/index.html">
+                    <img class="social_logos" src="images/instagram.png" alt="instagram" title="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+
+</body>
+
+</html>

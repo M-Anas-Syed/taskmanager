@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Create a task</title>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div><img class="logo" src="images/TaskManagersolid.png" alt="Task manager logo"></div>
+            <div class="links_container">
+                <a class="links" href="/index.html">Dashboard</a>
+                <a class="links" href="#">Calendar</a>
+                <a class="links" href="/login.html">Login</a>
+                <a class="links" href="#">Sign up</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="new_task_sec">
+        <h2 class="ct_heading">Create a new Task</h2>
+        <div class="new_task_form">
+            <div class="new_task_div">
+                <label for="">Folder</label><br>
+                <select class="drop_down" name="" id="">
+                    <option value="">Task 1</option>
+                    <option value="">Task 2</option>
+                </select><br>
+            </div>
+            <div class="new_task_div">
+                <label for="">Task Name:</label><br>
+                <input class="new_task_name" id="newTaskId" type="text"><br>
+            </div>
+            <div class="new_task_div">
+                <label for="">Task Status:</label><br>
+                <div class="status_options">
+                    <p>Inactive</p>
+                    <p>Started</p>
+                    <p>Ongoing</p>
+                    <p>Completed</p>
+                </div><br>
+                <input class="task_status" type="range" min="1" max="4"><br>
+            </div>
+            <div class="new_task_div">
+                <label for="">Task Priority:</label><br>
+                <div class="status_div">
+                    <span>
+                        <label for="">High</label>
+                        <input value="High" name="status" type="radio">
+                    </span>
+                    <span>
+                        <label for="">Mid</label>
+                        <input value="Mid" name="status" type="radio">
+                    </span>
+                    <span>
+                        <label for="">Low</label>
+                        <input value="Low" name="status" type="radio">
+                    </span>
+                </div>
+            </div>
+            <div class="login_btns">
+                <button class="cancel_btn">Cancel</button>
+                <button class="login_btn" onclick="addTask()">Create</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_div">
+            <img class="footer_logo" src="/images/TaskManager.png" alt="TaskManagerLogo">
+            <div class="footer_links">
+                <a class="footer_a" href="/index.html">Home</a>
+                <a class="footer_a" href="#">Calendar</a>
+                <a class="footer_a" href="/login.html">Login</a>
+                <a class="footer_a" href="/signup.html">Sign up</a>
+            </div>
+            <div style="display: flex;justify-content: space-around;width: 100px;">
+                <a href="/index.html">
+                    <img class="social_logos" src="images/facebook.png" alt="facebook" title="Facebook">
+                </a>
+                <a href="/index.html">
+                    <img class="social_logos" src="images/google.png" alt="google" title="Google">
+                </a>
+                <a href="/index.html">
+                    <img class="social_logos" src="images/instagram.png" alt="instagram" title="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

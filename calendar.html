@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.css' rel='stylesheet' />
+    <title>Task Manager</title>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div><img class="logo" src="images/TaskManagersolid.png" alt="Task manager logo"></div>
+            <div class="links_container">
+                <a class="links" href="/home.html">Dashboard</a>
+                <a class="links" href="/calendar.html">Calendar</a>
+                <a class="links" href="/index.html">Logout</a>
+                <a class="links profile_svg" href="/profile_page.html"><img class="img_style" src="/images/account.svg" alt="profile"></a>
+
+            </div>
+        </nav>
+    </header>
+    <a id="calendar_help" href="#">
+        <img class="calendar_help" src="/images/help.svg" alt="help">
+    </a>
+    <div class="calendar_help_txt inactive">
+        <p>This is the calendar view which shows all the tasks for each day according to their due time.
+        </p>
+    </div>
+    <section class="calendar_div">
+        <div style="max-width: 700px; min-width: 800px;max-height: 500px;" id='calendar'></div>
+        <div class="calendar_info">
+            <span class="task_timings"><h3>Tuesday, 1st March 2022</h3></span>
+            <span class="task_timings">9:00-10:00 : Lecture</span>
+            <span class="task_timings">10:00-11:00 : Lab</span>
+            <span class="task_timings">13:00-15:00 : Tutorial</span>
+            <span class="task_timings">16:00-17:30 : Work on Assignment</span>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_div">
+            <img class="footer_logo" src="/images/TaskManager.png" alt="TaskManagerLogo">
+            <div class="footer_links">
+                <a class="footer_a" href="#">Home</a>
+                <a class="footer_a" href="#">Calendar</a>
+                <a class="footer_a" href="/index.html">Logout</a>
+            </div>
+            <div style="display: flex;justify-content: space-around;width: 100px;">
+                <a href="/index.html">
+                    <img class="social_logos" src="images/facebook.png" alt="facebook" title="Facebook">
+                </a>
+                <a href="/index.html">
+                    <img class="social_logos" src="images/google.png" alt="google" title="Google">
+                </a>
+                <a href="/index.html">
+                    <img class="social_logos" src="images/instagram.png" alt="instagram" title="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js'></script>
+
+</body>
+
+</html>
