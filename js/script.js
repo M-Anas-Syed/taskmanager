@@ -358,7 +358,7 @@ window.onload = function loadPage() {
     });
 
 
-    if (window.localStorage.getItem("tasks").split(",") != null) {
+    if (window.localStorage.getItem("tasks") != null) {
 
 
       taskNamesList = window.localStorage.getItem("tasks").split(",");
