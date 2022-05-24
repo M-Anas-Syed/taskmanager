@@ -24,8 +24,8 @@
                 <a class="links" href="#">Dashboard</a>
                 <a class="links" href="/pages/calendar.html">Calendar</a>
                 <a class="links" href="/index.html">Logout</a>
-                <a class="links profile_svg" href="/pages/profile_page.html"><img class="img_style" src="/images/account.svg"
-                        alt="profile"></a>
+                <a class="links profile_svg" href="/pages/profile_page.html"><img class="img_style"
+                        src="/images/account.svg" alt="profile"></a>
             </div>
         </nav>
     </header>
@@ -35,13 +35,13 @@
         <input class="switch" type="checkbox">
         <label for="">Gantt Chart</label>
     </div>
-    
+
     <div class="home_help_txt inactive">
         <p>This is a task list which displays all your daily tasks. You can add, delete and edit task in this section.
         </p>
     </div>
     <section class="home_body">
-        <a id="help" href="#"> 
+        <a id="help" href="#">
             <img class="home_help" src="/images/help.svg" alt="help">
         </a>
         <div class="tasks">
@@ -60,9 +60,27 @@
                 <a class="add_task">Add Task</a>
             </div>
         </div>
-
-
-        <!-- <div style="max-height: 355px;" id='calendar'></div> -->
+        <div class="notification_div">
+            <h3 class="nh">Notifications</h3>
+            <div>
+                <div class="indi-noti">
+                    <p class="noti_txt">Task 'Study' was deleted</p>
+                    <p class="noti_time">1h ago</p>
+                </div>
+                <div class="indi-noti">
+                    <p class="noti_txt">Task 'Study' was edited</p>
+                    <p class="noti_time">2h ago</p>
+                </div>
+                <div class="indi-noti">
+                    <p class="noti_txt">Status was updated for task 'Study'</p>
+                    <p class="noti_time">1d ago</p>
+                </div>
+                <div class="indi-noti">
+                    <p class="noti_txt">New task 'Study' was added</p>
+                    <p class="noti_time">2d ago</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="popup">
@@ -169,7 +187,7 @@
         </div>
     </div>
 
-    <div class="home_help_txt inactive">
+    <div class="gantt_help_txt inactive">
         <p>This gantt chart is used to display the amount of tasks completed in certain periods of time.
         </p>
     </div>

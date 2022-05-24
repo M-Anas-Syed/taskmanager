@@ -980,7 +980,6 @@ justify-content: space-around;
 
 .home_help_txt{
     position: absolute;
-right: 200px;
 width: 300px;
 top: 230px;
 font-size: 13px;
@@ -988,12 +987,24 @@ background: #E8E8E8;
 padding: 5px 7px;
 z-index: 100;
 border-radius: 0px 10px 10px;
+left: 600px;
+}
+
+.gantt_help_txt{
+    position: absolute;
+    width: 300px;
+    top: 230px;
+    font-size: 13px;
+    background: #E8E8E8;
+    padding: 5px 7px;
+    z-index: 100;
+    border-radius: 0px 10px 10px;
+    right: 200px;
 }
 
 
 #help{
     position: absolute;
-    right: 480px;
     top: 200px;
     z-index: 100;
 }
@@ -1056,4 +1067,35 @@ font-size: 30px;
     display: flex;
 width: 130px;
 justify-content: space-between;
+}
+
+.notification_div{
+    width: 350px;
+    background: #fdf5e6;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nh{
+    text-align: center;
+    font-size: 25px;
+}
+
+.indi-noti{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+.noti_txt{
+    margin: 0;
+    font-size: 15px;
+}
+
+.noti_time{
+    margin: 0;
+    font-size: 13px;
+    color: #BEBEBE;
 }
