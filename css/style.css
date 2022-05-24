@@ -29,6 +29,10 @@ nav {
     color: black;
 }
 
+.curr_page{
+    color: black;
+}
+
 .links:not(:last-child) {
     margin-right: 40px;
 }
