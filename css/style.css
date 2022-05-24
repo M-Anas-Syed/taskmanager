@@ -1031,3 +1031,29 @@ z-index: 100;
 border-radius: 0px 10px 10px;
 left: 180px;
 }
+
+.snw{
+    font-weight: 400;
+font-size: 30px;
+}
+
+.legends{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0 10px;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+}
+
+.col-name{
+    margin: 0;
+    color: #A9A9A9;
+}
+
+.stat-pri{
+    display: flex;
+width: 130px;
+justify-content: space-between;
+}

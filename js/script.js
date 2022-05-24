@@ -97,7 +97,7 @@ function validate() {
 
   if (username == "user" && password == "name") {
     alert("Login sucessfully");
-    window.location = "/home.html";
+    window.location = "/pages/home.html";
     return false;
 
   } else {
@@ -112,10 +112,10 @@ function validate() {
   }
 }
 if (window.location.href.includes('signup')) {
-  document.getElementsByClassName('signup_btn')[0].addEventListener('click', function () {
-    alert("Registeration completed");
-    window.location = "/login.html";
-  })
+    document.getElementById('sign-in-form').addEventListener('submit', function () {
+      alert("Registeration completed");
+      window.location.href = "/pages/login.html";
+    });
 }
 
 
@@ -262,41 +262,44 @@ var taskPriorityList;
 function addTask() {
 
   var myInput = document.getElementById("newTaskId");
-  if (window.localStorage.getItem("tasks") != null) {
-    var taskName = window.localStorage.getItem("tasks");
-    taskName += myInput.value + ',';
-    window.localStorage.setItem("tasks", taskName);
-  } else {
-    var taskName = '';
-    taskName += myInput.value + ',';
-    window.localStorage.setItem("tasks", taskName);
-  }
+  if(myInput.value == ''){
+    alert('The name field can not be empty!')
+  }else{
+    if (window.localStorage.getItem("tasks") != null) {
+      var taskName = window.localStorage.getItem("tasks");
+      taskName += myInput.value + ',';
+      window.localStorage.setItem("tasks", taskName);
+    } else {
+      var taskName = '';
+      taskName += myInput.value + ',';
+      window.localStorage.setItem("tasks", taskName);
+    }
 
+    var ts = document.getElementsByClassName('task_status')[0];
+    if (window.localStorage.getItem("taskStat") != null) {
+      var taskStatus = window.localStorage.getItem("taskStat");
+      taskStatus += ts.value + ',';
+      window.localStorage.setItem("taskStat", taskStatus);
+    } else {
+      var taskStatus = '';
+      taskStatus += ts.value + ',';
+      window.localStorage.setItem("taskStat", taskStatus);
+    }
 
-  var ts = document.getElementsByClassName('task_status')[0];
-  if (window.localStorage.getItem("taskStat") != null) {
-    var taskStatus = window.localStorage.getItem("taskStat");
-    taskStatus += ts.value + ',';
-    window.localStorage.setItem("taskStat", taskStatus);
-  } else {
-    var taskStatus = '';
-    taskStatus += ts.value + ',';
-    window.localStorage.setItem("taskStat", taskStatus);
-  }
-
-
-  var tp = document.querySelector('input[name="status"]:checked').value;
-  if (window.localStorage.getItem("taskP") != null) {
-    var taskPriority = window.localStorage.getItem("taskP");
-    taskPriority += tp + ',';
-    window.localStorage.setItem("taskP", taskPriority);
-  } else {
-    var taskPriority = '';
-    taskPriority += tp + ',';
-    window.localStorage.setItem("taskP", taskPriority);
-  }
+    var tp = document.querySelector('input[name="status"]:checked').value;
+    if (window.localStorage.getItem("taskP") != null) {
+      var taskPriority = window.localStorage.getItem("taskP");
+      taskPriority += tp + ',';
+      window.localStorage.setItem("taskP", taskPriority);
+    } else {
+      var taskPriority = '';
+      taskPriority += tp + ',';
+      window.localStorage.setItem("taskP", taskPriority);
+    }
+  
 
   location.reload(true);
+  }
 
 }
 
@@ -566,7 +569,7 @@ window.onload = function loadPage() {
     var listOfTasks = document.getElementsByClassName('tasks')[0].children.length;
     var emptyTasksList = document.getElementById('empytasks');
 
-    if (listOfTasks <= 3) {
+    if (listOfTasks <= 4) {
       console.log('reached 1st');
       emptyTasksList.classList.remove('inactive');
     } else {
