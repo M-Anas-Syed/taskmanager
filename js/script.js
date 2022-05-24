@@ -1,44 +1,47 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var calendarEl = document.getElementById('calendar');
-
-  var calendar = new FullCalendar.Calendar(calendarEl, {
-    initialDate: '2022-03-01',
-    editable: true,
-    selectable: true,
-    businessHours: true,
-    dayMaxEvents: true, // allow "more" link when too many events
-    events: [
-      {
-        title: 'Career Fairs',
-        start: '2022-03-03',
-        url: 'http://www.le.ac.uk'
-      },
-      {
-        title: 'Happy days',
-        start: '2022-03-07',
-        end: '2022-03-10'
-      },
-      {
-        title: 'Meeting',
-        start: '2022-03-12T10:30:00',
-        end: '2022-03-12T12:30:00'
-      },
-      {
-        title: 'Lunch',
-        start: '2022-03-12T12:00:00'
+if(document.URL.includes('calendar.html')){
+  document.addEventListener('DOMContentLoaded', function () {
+    var calendarEl = document.getElementById('calendar');
+  
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialDate: '2022-03-01',
+      editable: true,
+      selectable: true,
+      businessHours: true,
+      dayMaxEvents: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'Career Fairs',
+          start: '2022-03-03',
+          url: 'http://www.le.ac.uk'
+        },
+        {
+          title: 'Happy days',
+          start: '2022-03-07',
+          end: '2022-03-10'
+        },
+        {
+          title: 'Meeting',
+          start: '2022-03-12T10:30:00',
+          end: '2022-03-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2022-03-12T12:00:00'
+        }
+      ], eventClick: function (info) {
+        info.jsEvent.preventDefault(); // don't let the browser navigate
+  
+        if (info.event.url) {
+          alert(info.event.url);
+          //window.open(info.event.url);
+        }
       }
-    ], eventClick: function (info) {
-      info.jsEvent.preventDefault(); // don't let the browser navigate
-
-      if (info.event.url) {
-        alert(info.event.url);
-        //window.open(info.event.url);
-      }
-    }
+    });
+  
+    calendar.render();
   });
+}
 
-  calendar.render();
-});
 
 if (document.URL.includes('profile_page.html')) {
 
